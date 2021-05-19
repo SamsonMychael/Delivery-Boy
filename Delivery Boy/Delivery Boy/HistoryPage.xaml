@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Delivery_Boy.HistoryPage"
+             BackgroundColor="White"
+              Padding="10"
+            >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     IconImageSource="addmap.png"
+                    Command="{Binding AddCommand}"
+                     />
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <BoxView HeightRequest="1" BackgroundColor="Black"/>
+        <ListView x:Name="PostListView"
+                  Margin="5,0,0,0"
+              ItemSelected="PostListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Places}" TextColor="Black" FontSize="17" FontAttributes="Bold"/>
+                            <Label Text="{Binding Venuename}" TextColor="DodgerBlue" FontSize="14" FontAttributes="Italic"/>
+
+                        </StackLayout>
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

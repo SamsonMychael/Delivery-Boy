@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Delivery_Boy.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Entry x:Name="nameentry" Placeholder="Enter your name" TextColor="Blue"/>
+            <Entry x:Name="emailEntry" Text="{Binding Email , Mode=TwoWay}" Placeholder="Enter your email" TextColor="Blue"/>
+            <Entry x:Name="passwordEntry" Text="{Binding Password , Mode=TwoWay}" Placeholder="Enter your password" IsPassword="True" TextColor="Blue"/>
+            <Entry x:Name="confirmpasswordEntry" Text="{Binding Confirmpassword,  Mode=TwoWay}" Placeholder="Enter your confirm password" IsPassword="True" TextColor="Blue"/>
+            <Button x:Name="registerButton"  Text="Register" Command="{Binding RegisterCommand}" CommandParameter="{Binding User}" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Already have an account ?"/>
+                <Label Text="Login" TextColor="Red">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="loginButton_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Delivery_Boy"
+             x:Class="Delivery_Boy.HomePage"
+            Title="Delivery Boy"
+            BarBackgroundColor="White"
+           
+            SelectedTabColor="Black"
+            UnselectedTabColor="LightGray"
+            >
+
+    <local:HistoryPage Title="HISTORY"  IconImageSource="history.png"/>
+    <local:MapPage Title="MAP" IconImageSource="mappin.png"/>
+
+</TabbedPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Delivery_Boy.PostListPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem  x:Name="updateButton"
+               IconImageSource="savemap.png"
+                      Clicked="updateButton_Clicked"
+                Text="Update"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout Margin="4">
+        <Entry x:Name="placeEntry"
+               Placeholder="Give name to the selected place"
+               PlaceholderColor="Blue"/>
+   
+        <Label x:Name="venuelabel"
+               Text="someplaces."
+               TextColor="Black"
+               FontAttributes="Bold"/>
+        <Label x:Name="addresslabel"
+               Text="-----"
+               TextColor="DodgerBlue"/>
+        <Label x:Name="coordinateslabel"
+               Text="----"
+               TextColor="Black"/>
+        <Label x:Name="distancelabel"
+               Text="---"
+               TextColor="Black"/>
+       
+       
+        <Button x:Name="deleteButton"
+                Text="Delete"
+                Margin="10,5"
+                BackgroundColor="Red"
+                TextColor="White"
+                Clicked="deleteButton_Clicked"/>
+    </StackLayout>
+</ContentPage>
